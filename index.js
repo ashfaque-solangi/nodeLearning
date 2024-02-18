@@ -60,6 +60,9 @@
 
 const express = require('express');
 const path    = require('path');
+const dbConnect = require('./dbConnect_2.js');
+
+dbConnect();
 
 const app        = express();
 const publicPath = path.join(__dirname, 'expressProject');
@@ -94,6 +97,8 @@ app.get('/profile', (_, resp) => {
 app.get('/abc', (_, resp) => {
     resp.render('abc');
 });
+
+app.use('/api', require('./api.js'));
 
 app.get('*', (_, resp) => {
     resp.sendFile(`${publicPath}/404.html`);
