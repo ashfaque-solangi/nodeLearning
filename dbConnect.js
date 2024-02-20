@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const mongoURL = 'mongodb+srv://admin:HvknuRtVmslClCYQ@demo.gn6hphd.mongodb.net/node_learning';
-// const mongoURL = 'mongodb://localhost:27017/node_learning';
 //HvknuRtVmslClCYQ
 
   const dbConnect = async() => {
